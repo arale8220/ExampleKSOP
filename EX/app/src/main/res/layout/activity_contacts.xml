@@ -5,15 +5,11 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
-    <com.google.android.gms.maps.MapView
+    <fragment
         android:id="@+id/map"
-        class="com.google.android.gms.maps.MapFragment"
         android:layout_width="match_parent"
-        android:layout_height="450dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp"
-        tools:ignore="MissingConstraints" />
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.MapFragment" />
 
     <TextView
         android:id="@+id/text"

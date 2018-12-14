@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
@@ -29,12 +31,14 @@ public class GameActivity extends AppCompatActivity implements BottomNavigationV
         setContentView(R.layout.activity_game);
         navigationView = (BottomNavigationView) findViewById(R.id.navigation);
         navigationView.setOnNavigationItemSelectedListener(this);
+
         button = (Button) findViewById(R.id.button);
         mFirstNumber = (TextView) findViewById(R.id.firstNumber);
         mSecondNumber = (TextView) findViewById(R.id.secondNumber);
         mThirdNumber = (TextView) findViewById(R.id.thirdNumber);
         mFourthNumber = (TextView) findViewById(R.id.fourthNumber);
         mFifthNumber = (TextView) findViewById(R.id.fifthNumber);
+        mPowerBall = (TextView) findViewById(R.id.powerBall);
 
 
 
@@ -53,10 +57,7 @@ public class GameActivity extends AppCompatActivity implements BottomNavigationV
         mThirdNumber.setText(powerBalls[2]);
         mFourthNumber.setText(powerBalls[3]);
         mFifthNumber.setText(powerBalls[4]);
-
-        Random rand = new Random();
-        int powerBall = (rand.nextInt(10)+1);
-        mPowerBall.setText(powerBall + "");
+        mPowerBall.setText(powerBalls[5]);
     }
 
 

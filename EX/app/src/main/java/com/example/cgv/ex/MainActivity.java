@@ -24,8 +24,8 @@ import java.util.Calendar;
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener, OnDateSelectedListener, OnMonthChangedListener{
 
     protected BottomNavigationView navigationView;
-    private String[] ksop = new String[]{"2018/12/5" , "2018/11/10" , "2018/11/17"};
     private String[] happy = new String[]{"2018/12/15" , "2018/12/17" , "2018/12/20"};
+    private String[] ksop = new String[]{"2018/12/5" , "2018/11/10" , "2018/11/17"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

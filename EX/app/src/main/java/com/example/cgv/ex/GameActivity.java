@@ -68,8 +68,8 @@ public class GameActivity extends AppCompatActivity implements BottomNavigationV
             int itemId = item.getItemId();
             if (itemId == R.id.navigation_calendar) {
                 startActivity(new Intent(this, MainActivity.class));
-            } else if (itemId == R.id.navigation_contacts) {
-                startActivity(new Intent(this, ContactsActivity.class));
+            } else if (itemId == R.id.navigation_other) {
+                startActivity(new Intent(this, OtherActivity.class));
             } else if (itemId == R.id.navigation_game) {
                 startActivity(new Intent(this, GameActivity.class));
             }

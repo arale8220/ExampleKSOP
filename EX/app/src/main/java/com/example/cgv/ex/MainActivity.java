@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         calendar.addDecorators(
                 new SundayDecorator(),
                 new SaturdayDecorator());
+
+
         calendar.setOnDateChangedListener(new OnDateSelectedListener() {
             @Override
             public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, boolean selected) {
@@ -62,8 +64,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             int itemId = item.getItemId();
             if (itemId == R.id.navigation_calendar) {
                 startActivity(new Intent(this, MainActivity.class));
-            } else if (itemId == R.id.navigation_contacts) {
-                startActivity(new Intent(this, ContactsActivity.class));
+            } else if (itemId == R.id.navigation_other) {
+                startActivity(new Intent(this, OtherActivity.class));
             } else if (itemId == R.id.navigation_game) {
                 startActivity(new Intent(this, GameActivity.class));
             }
@@ -72,15 +74,22 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         return true;
     }
 
+
+    //자동으로 생성되는 함수
     @Override
     public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, boolean selected) {
 
     }
 
+    //자동으로 생성되는 함수
     @Override
     public void onMonthChanged(MaterialCalendarView widget, CalendarDay date) {
 
     }
+
+
+
+
 
     private class SundayDecorator implements DayViewDecorator {
         private final Calendar calendar = Calendar.getInstance();
@@ -100,6 +109,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             view.addSpan(new ForegroundColorSpan(Color.RED));
         }
     }
+
+
+
+
 
     private class SaturdayDecorator implements DayViewDecorator {
         private final Calendar calendar = Calendar.getInstance();

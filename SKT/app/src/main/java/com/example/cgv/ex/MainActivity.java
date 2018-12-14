@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     protected BottomNavigationView navigationView;
     private String[] happy = new String[]{"2018/12/15" , "2018/12/17" , "2018/12/20"};
     private String[] ksop = new String[]{"2018/12/5" , "2018/11/10" , "2018/11/17"};
+    //위와 같은 형식으로, 자신이 달력에 추가할 날짜들을 적으세요.
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         //onCreate함수 안에서, 이 액티비티가 시작될 때 어떠한 xml파일을 보이도록 할지 설정해줍니다.
         //어떤 이름의 layout을 설정해주어야 하나요?
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.????????);
 
         //Navigation 에서 각 원소를 클릭하면 이동하게 만드는 함수입니다.
         // 클릭을 하면, 맨 아래의 onNavigationItemSelected 함수가 자동으로 실행됩니다.
@@ -54,14 +55,21 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         //아래의 SundayDecorator 등의 함수를 살펴보면서 확인해봅시다.
 
 
+        //날짜를 선택하면 어떠한 기능을 할 지 구현하는 부분입니다.
         calendar.setOnDateChangedListener(new OnDateSelectedListener() {
             @Override
             public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, boolean selected) {
                 String fullDay = Integer.toString(date.getYear())+"/"+Integer.toString(date.getMonth()+1)+"/"+Integer.toString(date.getDay());
 
-                if (Arrays.asList(ksop).contains(fullDay)) {Toast.makeText(MainActivity.this, fullDay+" is KSOP Day!", Toast.LENGTH_SHORT).show();}
-                else if (Arrays.asList(happy).contains(fullDay)) {Toast.makeText(MainActivity.this, fullDay+" is happy day!", Toast.LENGTH_SHORT).show();}
-                else  {Toast.makeText(MainActivity.this, "No Planned on this day", Toast.LENGTH_SHORT).show();}
+                //만약 날짜가 위의 List에 포함되어 있다면, 특정한 기능을 하도록 만들어줄 것입니다.
+                //Toast는 문자형 알림을 잠시 띄어주는 역할을 합니다.
+
+                //만약 특정 날짜가 ksop 리스트 안에 있다면, 그 날짜와 그 날짜에 케이솝 수업이 있다는 정보를 Toast를 이용해 띄워보세요.
+                //예시는 앞에서 확인할 수 있습니다.
+                if (Arrays.asList(ksop).??????????) {Toast.makeText(MainActivity.this, ?????????????????????, Toast.LENGTH_SHORT).show();}
+                //위와 비슷하게, 날짜가 happy 리스트에 있을때, 그리고 아무런 리스트에도 없을 때의 정보를 띄워보세요.
+                else if (???) {???}
+                else {???}
             }
         });
     }
@@ -123,24 +131,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
 
 
-
-
+    //위의 SundayDecorator을 참고하여 토요일에는 파란색이 되도록 설정해보세요.
     private class SaturdayDecorator implements DayViewDecorator {
-        private final Calendar calendar = Calendar.getInstance();
-
-        public SaturdayDecorator() {
-        }
-
-        @Override
-        public boolean shouldDecorate(CalendarDay day) {
-            day.copyTo(calendar);
-            int weekDay = calendar.get(Calendar.DAY_OF_WEEK);
-            return weekDay == Calendar.SATURDAY;
-        }
-
-        @Override
-        public void decorate(DayViewFacade view) {
-            view.addSpan(new ForegroundColorSpan(Color.BLUE));
-        }
+        ????....
     }
 }

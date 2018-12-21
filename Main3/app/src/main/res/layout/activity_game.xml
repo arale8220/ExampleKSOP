@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.skooltchdev.lotterygenerator.MainActivity">
+
+
+        <TextView
+            android:textAlignment="center"
+            android:layout_margin="4dp"
+            android:padding="8dp"
+            android:textSize="36sp"
+            android:textColor="@android:color/black"
+            android:fontFamily="casual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="KSOP Lottery" />
+
+        <LinearLayout
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/firstNumber"
+                android:layout_weight="1"
+                android:fontFamily="casual"
+                android:textSize="24sp"
+                android:padding="4dp"
+                android:layout_margin="8dp"
+                android:text="01"
+                android:textColor="@android:color/black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/secondNumber"
+                android:layout_weight="1"
+                android:fontFamily="casual"
+                android:textSize="24sp"
+                android:padding="4dp"
+                android:layout_margin="8dp"
+                android:text="02"
+                android:textColor="@android:color/black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/thirdNumber"
+                android:layout_weight="1"
+                android:fontFamily="casual"
+                android:textSize="24sp"
+                android:padding="4dp"
+                android:layout_margin="8dp"
+                android:text="03"
+                android:textColor="@android:color/black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/fourthNumber"
+                android:layout_weight="1"
+                android:fontFamily="casual"
+                android:textSize="24sp"
+                android:padding="4dp"
+                android:layout_margin="8dp"
+                android:text="04"
+                android:textColor="@android:color/black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/fifthNumber"
+                android:layout_weight="1"
+                android:fontFamily="casual"
+                android:textSize="24sp"
+                android:padding="4dp"
+                android:layout_margin="8dp"
+                android:text="05"
+                android:textColor="@android:color/black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/powerBall"
+                android:layout_weight="1"
+                android:fontFamily="casual"
+                android:textSize="24sp"
+                android:padding="4dp"
+                android:layout_margin="8dp"
+                android:text="06"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:fontFamily="casual"
+            android:text="Click the button to generate numbers"
+            android:layout_margin="30dp"/>
+
+    </LinearLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <include
+            android:id="@+id/navigation"
+            layout="@layout/element_bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
+    </android.support.design.widget.BottomNavigationView>
+
+</android.support.constraint.ConstraintLayout>
+
+
+
